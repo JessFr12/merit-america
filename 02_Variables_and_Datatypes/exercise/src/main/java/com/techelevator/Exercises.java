@@ -130,30 +130,38 @@ public class Exercises {
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
-
+		int joshMarbles = 16;
+		int marblesAfterLoss = joshMarbles - 7;
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
-
+		int megansSeashells = 19;
+		int goalSeashells = 25 - megansSeashells;
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
-
+		int balloons = 17;
+		int redBalloons = 8;
+		int greenBalloons = balloons - redBalloons;
 
         /* Exercise 19
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
-
+		int booksOnShelf = 38;
+		int addedBooksOnShelf = 10;
+		int totalBooksOnShelf = booksOnShelf + addedBooksOnShelf;
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
-
+		int beeLegs = 6;
+		int bees = 8;
+		int legsInTotal = beeLegs * bees;
 
         /* Exercise 21
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
