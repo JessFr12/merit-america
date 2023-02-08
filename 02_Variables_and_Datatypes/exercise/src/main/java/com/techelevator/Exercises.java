@@ -40,37 +40,46 @@ public class Exercises {
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
-
+		int numberOfPigeons = 1;
+		int pigeonsEatingBreadcrumbs = numberOfPigeons + 1;
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
-
+		int numberOfOwls = 3;
+		int owlsOnFence = numberOfOwls + 2;
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+		int beaversWorkingOnHome = 2;
+		int beaversLeftWorking = beaversWorkingOnHome - 1;
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
-
+		int toucansOnTreeLimb = 2;
+		int afterOneToucanJoined = toucansOnTreeLimb + 1;
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
-
+		int squirrels = 4;
+		int nuts = 2;
+		int moreSquirrelsThanNuts = squirrels - nuts;
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-
+		double quarter = 0.25;
+		double dime = 0.10;
+		double nickel = 0.05;
+		double totalChangeFound = quarter + dime + (nickel * 2);
 
         /* Exercise 11
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
