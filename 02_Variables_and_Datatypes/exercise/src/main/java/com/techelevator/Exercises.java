@@ -87,33 +87,44 @@ public class Exercises {
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
-
+		int briersMuffins = 18;
+		int macAdamsMuffins = 20;
+		int flannerysMuffins = 17;
+		int totalMuffins = briersMuffins + macAdamsMuffins + flannerysMuffins;
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
-
+		double yoyo = 0.24;
+		double whistle = 0.14;
+		double totalSpent = yoyo + whistle;
 
         /* Exercise 13
         13. Mrs. Hilt made 5 Rice Krispies Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
-
+		int riceKrispiTreats = 5;
+		int largeMarshmallows = 8;
+		int miniMarshmallows = 10;
+		int totalMarshmallowsUsed = largeMarshmallows + miniMarshmallows;
 
         /* Exercise 14
         14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
-
+		int hiltsSnowHeightIn = 29;
+		int schoolSnowHeightIn = 17;
+		int hiltsHeightDifference = hiltsSnowHeightIn - schoolSnowHeightIn;
 
         /* Exercise 15
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
-
+		double hiltsCash = 10.0;
+		double totalSheSpent = hiltsCash - 3.0 - 2.0;
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
