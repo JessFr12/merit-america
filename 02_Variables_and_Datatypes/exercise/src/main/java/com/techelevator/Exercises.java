@@ -190,45 +190,58 @@ public class Exercises {
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
-
+		int milesToConcert = 78;
+		int gasStop = 32;
+		int milesLeftToGo = milesToConcert - gasStop;
 
         /* Exercise 25
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
-
+		int saturdayMorningShovel = 90;
+		int saturdayAfternoonShovel = 45;
+		int totalShovelTime = saturdayMorningShovel + saturdayAfternoonShovel;
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+		int hotdogsBought = 6;
+		double pricePerHotdog = 0.50;
+		double totalHotdogPurchase = hotdogsBought * pricePerHotdog;
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-
+		double cashOnHilt = 0.50;
+		double pricePerPencil = 0.07;
+		int maxPencilPurchase = (int) (cashOnHilt / pricePerPencil);
 
         /* Exercise 28
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
-
+		int butterfliesAroundHilt = 33;
+		int orangeButterflies = 20;
+		int redButterflies = butterfliesAroundHilt - orangeButterflies;
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
-
+		double kateCashToClerk = 1.00;
+		double candyCost = 0.54;
+		double changeForKate = kateCashToClerk - candyCost;
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
-
+		int marksTrees = 13;
+		int afterMarkPlantsMore = marksTrees + 12;
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
