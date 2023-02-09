@@ -247,31 +247,39 @@ public class Exercises {
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
-
+		int daysUntilSeeingGrandma = 2;
+		int hoursUntilSeeingGrandma = daysUntilSeeingGrandma * 24;
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
-
+		int kimsCousins = 4;
+		int gumForEachCousin = 5;
+		int totalGumNeeded = kimsCousins * gumForEachCousin;
 
         /* Exercise 33
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
-
+		double cashOnDan = 3.00;
+		double candybarPrice = 1.00;
+		double changeForDan = cashOnDan - candybarPrice;
 
         /* Exercise 34
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
-
+		int boatsInLake = 5;
+		int peopleOnEachBoat = 3;
+		int totalPeopleOnBoats = boatsInLake * peopleOnEachBoat;
 
         /* Exercise 35
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
-
+		int legosWithEllen = 380;
+		int legosAfterLoss = legosWithEllen - 57;
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
