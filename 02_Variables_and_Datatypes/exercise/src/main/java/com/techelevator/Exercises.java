@@ -336,35 +336,45 @@ public class Exercises {
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+		int mariansCookies = 276;
+		int cookiesPerTray = 12;
+		int traysNeededTotal = mariansCookies / cookiesPerTray;
 
         /* Exercise 43
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+		int numberOfPretzels = 480;
+		int pretzelsPerServing = 12;
+		int totalPretzelServings = numberOfPretzels / pretzelsPerServing;
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+		int totalLemonCakes = 53;
+		int lemoncakesPerBox = 3;
+		int boxesGivenAway = (totalLemonCakes - 2) / lemoncakesPerBox;
 
         /* Exercise 45
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+		int carrotsPrepared = 74;
+		int peopleWithEqualServing = 12;
+		int carrotsLeftOver = carrotsPrepared % (carrotsPrepared / peopleWithEqualServing);
 
         /* Exercise 46
         46. Susie and her sister gathered all 98 of their teddy bears and placed
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+		int numberOfTeddyBears = 98;
+		int teddyBearsPerShelf = 7;
+		int filledShelvesWithBears = numberOfTeddyBears / teddyBearsPerShelf;
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
