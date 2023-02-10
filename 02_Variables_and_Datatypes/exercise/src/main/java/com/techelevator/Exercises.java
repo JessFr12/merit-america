@@ -285,39 +285,51 @@ public class Exercises {
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
-
+		int muffinsBaked = 35;
+		int muffinsNeededTotal = 83;
+		int muffinsLeftToBake = muffinsNeededTotal - muffinsBaked;
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+		int willysCrayons = 1400;
+		int lucysCrayons = 290;
+		int crayonGapAmount = willysCrayons - lucysCrayons;
 
         /* Exercise 38
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
-
+		int stickersOnPage = 10;
+		int pagesWithStickers = 22;
+		int totalStickers = stickersOnPage * pagesWithStickers;
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
-
+		int numberOfCupcakes = 100;
+		int numberOfChildren = 8;
+		double cupcakeAmountPerChild = (double)numberOfCupcakes / (double)numberOfChildren;
 
         /* Exercise 40
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
-
+		int gingerbreadCookies = 47;
+		int cookiesInEachJar = 6;
+		int cookiesLeftOver = gingerbreadCookies % (gingerbreadCookies / cookiesInEachJar);
 
         /* Exercise 41
         41. She also prepared 59 croissants which she plans to give to her 8
         neighbors. If each neighbor received an equal number of croissants,
         how many will be left with Marian?
         */
-
+		int croissantsPrepared = 59;
+		int neighborsToGiveTo = 8;
+		int croissantLeftOver = croissantsPrepared % (croissantsPrepared / neighborsToGiveTo);
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
