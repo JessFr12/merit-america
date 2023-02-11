@@ -381,7 +381,9 @@ public class Exercises {
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
-
+		int picturesInTotal = 480;
+		int maxAmountPicturesPerAlbum = 20;
+		int albumsNeeded = picturesInTotal / maxAmountPicturesPerAlbum;
 
         /* Exercise 48
         48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -389,28 +391,38 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+		int numberOfTradingCards = 94;
+		int maxBoxAmountTradingCards = 8;
+		int filledBoxAmountTradingCards = numberOfTradingCards / maxBoxAmountTradingCards;
+		int unfilledBoxAmountTradingCards = numberOfTradingCards % (numberOfTradingCards / maxBoxAmountTradingCards);
 
         /* Exercise 49
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+		int booksOwnedByFatherOfSusie = 210;
+		int shelvesToHaveBooksStored = 10;
+		int booksOnEachShelf = booksOwnedByFatherOfSusie / shelvesToHaveBooksStored;
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+		int christinasBakedCroissants = 17;
+		int guestsRecievingCroissants = 7;
+		double equalAmountPerGuest = (double)christinasBakedCroissants / (double)guestsRecievingCroissants;
 
 	    /* Exercise 51
-	    51. Bill and Jill are house painters. Bill can paint a standard room in 2.15 hours, while Jill averages
-	    1.90 hours. How long will it take the two painters working together to paint 5 standard rooms?
-	    Hint: Calculate the rate at which each painter can complete a room (rooms / hour), combine those rates, 
-	    and then divide the total number of rooms to be painted by the combined rate.
-	    */
-     
+		51. Bill and Jill are house painters. Bill can paint a standard room in 2.15 hours, while Jill averages
+		1.90 hours. How long will it take the two painters working together to paint 5 standard rooms?
+		Hint: Calculate the rate at which each painter can complete a room (rooms / hour), combine those rates,
+		and then divide the total number of rooms to be painted by the combined rate.
+	     */
+		double billRoomsPerHour = 1 / 2.15;
+		double jillRoomsPerHour = 1 / 1.90;
+		double combinedRoomsPerHour = billRoomsPerHour + jillRoomsPerHour;
+		double timeToCompleteFiveRooms = 5 / combinedRoomsPerHour;
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,
@@ -419,13 +431,18 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
-
-
+		String firstName = "Grace";
+		String lastName = "Hopper";
+		String middleInitial = "B";
+		String fullName = lastName + ", " + firstName + " " + middleInitial + ".";
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
-
+		int distanceBetween = 800;
+		int distanceTravelled = 537;
+		double tripCompletedPercentage = (double) distanceTravelled / distanceBetween;
+		int tripCompletedWholeNumber = (int) (tripCompletedPercentage * 100);
 	}
 
 }
