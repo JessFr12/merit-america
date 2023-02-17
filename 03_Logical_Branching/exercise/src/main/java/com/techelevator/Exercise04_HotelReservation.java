@@ -24,7 +24,15 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3) ➔ 269.97
      */
     public double calculateStayTotal(int numberOfNights) {
-        return 0;
+       double calculateStayTotal = 0;
+       if (numberOfNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE) {
+           calculateStayTotal = DAILY_RATE * numberOfNights;
+           return calculateStayTotal;
+       } else if (numberOfNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE) {
+           calculateStayTotal = DISCOUNT_RATE * numberOfNights;
+           return calculateStayTotal;
+       }
+       return calculateStayTotal;
     }
 
     /*
@@ -42,7 +50,22 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, 2) ➔ 289.97
      */
     public double calculateStayTotal(int numOfTotalNights, int numOfWeekendNights) {
-        return 0;
+        double calculateStayTotal = 0;
+        final double WEEKEND_NIGHTS = DAILY_RATE;
+        if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0) {
+            calculateStayTotal = numOfTotalNights * DAILY_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0) {
+            calculateStayTotal = numOfTotalNights * DAILY_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0) {
+            calculateStayTotal = numOfTotalNights * DISCOUNT_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0) {
+            calculateStayTotal = (WEEKEND_NIGHTS * numOfWeekendNights) + (numOfTotalNights - numOfWeekendNights) * DISCOUNT_RATE;
+            return calculateStayTotal;
+        }
+        return calculateStayTotal;
     }
 
     /*
@@ -60,6 +83,35 @@ public class Exercise04_HotelReservation {
     calculateStayTotal(3, 1, true) ➔ 269.97
      */
     public double calculateStayTotal(int numOfTotalNights, int numOfWeekendNights, boolean isRewardsMember) {
-        return 0;
+        double calculateStayTotal = 0;
+        final double WEEKEND_NIGHTS = DAILY_RATE;
+        double rewardsDiscount = DISCOUNT_RATE;
+        if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0 && isRewardsMember == false ) {
+            calculateStayTotal = numOfTotalNights * DAILY_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0 && isRewardsMember == true ) {
+            calculateStayTotal = numOfTotalNights * rewardsDiscount;
+            return calculateStayTotal;
+        } else if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0 && isRewardsMember == false) {
+            calculateStayTotal = numOfTotalNights * DAILY_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights < MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0 && isRewardsMember == true) {
+            calculateStayTotal = numOfTotalNights * rewardsDiscount;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0 && isRewardsMember == false) {
+            calculateStayTotal = numOfTotalNights * DISCOUNT_RATE;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights == 0 && isRewardsMember == true) {
+            calculateStayTotal = numOfTotalNights * rewardsDiscount;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0 && isRewardsMember == true) {
+            calculateStayTotal = numOfTotalNights * rewardsDiscount;
+            return calculateStayTotal;
+        } else if (numOfTotalNights >= MINIMUM_NIGHTS_FOR_DISCOUNT_RATE && numOfWeekendNights > 0 && isRewardsMember == false) {
+            calculateStayTotal = (WEEKEND_NIGHTS * numOfWeekendNights) + (numOfTotalNights - numOfWeekendNights) * DISCOUNT_RATE;
+            return calculateStayTotal;
+        }
+        return calculateStayTotal;
+
     }
 }
