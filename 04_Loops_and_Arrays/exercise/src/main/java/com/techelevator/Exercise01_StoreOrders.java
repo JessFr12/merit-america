@@ -28,7 +28,7 @@ public class Exercise01_StoreOrders {
     private final int CALZONE = 40;
     private final int SPAGHETTI_PIE = 41;
     private final int BAKED_ZITI = 42;
-
+   // int[] storeOrders = {10, 11, 20, 21, 30, 31, 40, 41, 42};
     /*
     Each customer order, consisting of one or more pizzas, is represented as an array
     where each value represents an item in that order.
@@ -43,10 +43,9 @@ public class Exercise01_StoreOrders {
 	 createOrder() → [10, 40, 31, 41]
      */
     public int[] createOrder() {
-        return new int[] {};
-    }
-
-    /*
+        int[] storeOrder = {10, 40, 31, 41};
+            return storeOrder;
+    }  /*
     Sally realized that she needed to know how many calzones her shop sells per day.
 
     Implement the logic to count the number of calzones sold per day when given an
@@ -57,13 +56,20 @@ public class Exercise01_StoreOrders {
     getCalzoneSales([30, 31, 10]) → 0
     getCalzoneSales([]) → 0
      */
-    public int getCalzoneSales(int[] orders) {
-        return 0;
+    public int getCalzoneSales(int[] orders)  {
+        int calzonesCount = 0;
+        for (int i = 0; i < orders.length; i++) {
+            if (orders[i] == 40) {
+                calzonesCount++;
+            }
+        }
+        return calzonesCount;
     }
 
-    /*
-    Sally also needs to know the total revenue for all cheese pizzas sold on any given day.
-        * Each small cheese pizza costs $8.
+
+
+    /* Sally also needs to know the total revenue for all cheese pizzas sold on any given day.*
+    *   * Each small cheese pizza costs $8.
         * Each medium cheese pizza costs $11.
         * Each large cheese pizza costs $14.
 
@@ -76,6 +82,16 @@ public class Exercise01_StoreOrders {
     getCheesePizzaRevenue([11, 21]) → 0
      */
     public int getCheesePizzaRevenue(int[] orders) {
-        return 0;
+        int revenue = 0;
+        for (int order : orders) {
+            if (order == SMALL_CHEESE) {
+                revenue += 8;
+            } else if (order == MEDIUM_CHEESE) {
+                revenue += 11;
+            } else if (order == LARGE_CHEESE) {
+                revenue += 14;
+            }
+        }
+        return revenue;
     }
 }
