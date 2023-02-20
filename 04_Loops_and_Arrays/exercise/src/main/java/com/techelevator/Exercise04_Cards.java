@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.io.FileReader;
+
 public class Exercise04_Cards {
 
     /*
@@ -25,7 +27,7 @@ public class Exercise04_Cards {
     getFirstCard(["K-C", "Q-D", "J-H", "10-S", "Q-C"]) → "K-C"
     */
     public String getFirstCard(String[] hand) {
-        return "";
+        return hand[0];
     }
 
     /*
@@ -42,7 +44,11 @@ public class Exercise04_Cards {
     discardFirstCard(["K-C", "Q-D", "J-H", "10-S", "Q-C"]) → ["Q-D", "J-H", "10-S", "Q-C"]
      */
     public String[] discardFirstCard(String[] hand) {
-        return new String[] {};
+        String[] newDeck = new String[4];
+        for (int i = 1;i < hand.length;i++) {
+            newDeck[i - 1] = hand[i];
+        }
+        return newDeck;
     }
 
     /*
@@ -61,6 +67,13 @@ public class Exercise04_Cards {
     discardTopCard([]) → []
      */
     public String[] discardTopCard(String[] remainingDeck) {
-        return new String[] {};
-    }    
+        if (remainingDeck.length == 0) {
+            return new String[]{};
+        }
+        String[] newDeck = new String[remainingDeck.length - 1];
+        for (int i = 1; i < remainingDeck.length; i++) {
+            newDeck[i - 1] = remainingDeck[i];
+        }
+        return newDeck;
+    }
 }
