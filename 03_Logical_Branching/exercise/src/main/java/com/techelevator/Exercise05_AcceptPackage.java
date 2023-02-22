@@ -24,7 +24,15 @@ public class Exercise05_AcceptPackage {
     acceptPackage(50) ➔ false
      */
     public boolean acceptPackage(int weightPounds) {
-        return false;
+        boolean acceptPackage;
+        if (weightPounds <= MAX_WEIGHT_POUNDS) {
+            acceptPackage = true;
+            return acceptPackage;
+        } else if (weightPounds > MAX_WEIGHT_POUNDS) {
+            acceptPackage = false;
+            return acceptPackage;
+        }
+        return true;
     }
 
     /*
@@ -41,7 +49,22 @@ public class Exercise05_AcceptPackage {
     acceptPackage(50, 4, 5, 10) ➔ false
      */
     public boolean acceptPackage(int weightPounds, int lengthInches, int widthInches, int heightInches) {
-        return false;
+        //6912 is max cubic inches
+        boolean packageAccepted;
+        if (weightPounds <= MAX_WEIGHT_POUNDS && (lengthInches * widthInches * heightInches) <= MAX_CUBIC_INCHES) {
+            packageAccepted = true;
+            return packageAccepted;
+        } else if (weightPounds <= MAX_WEIGHT_POUNDS && (lengthInches * widthInches * heightInches) > MAX_CUBIC_INCHES) {
+            packageAccepted = false;
+            return packageAccepted;
+        } else if (weightPounds > MAX_WEIGHT_POUNDS && (lengthInches * widthInches * heightInches) <= MAX_CUBIC_INCHES) {
+            packageAccepted = false;
+            return packageAccepted;
+        } else if (weightPounds < MAX_WEIGHT_POUNDS && (lengthInches * widthInches * heightInches) > MAX_CUBIC_INCHES) {
+            packageAccepted = false;
+            return packageAccepted;
+        }
+        return true;
     }
 
     /*
@@ -64,6 +87,20 @@ public class Exercise05_AcceptPackage {
     acceptPackage(50, 4, 5, 10, true) ➔ false
      */
     public boolean acceptPackage(int weightPounds, int lengthInches, int widthInches, int heightInches, boolean isSurchargePaid) {
+        double size = lengthInches * widthInches * heightInches;
+        if (weightPounds <= 40) {
+            if (size < 6912) {
+                if (heightInches < 66) {
+                    return true;
+
+                } else if (isSurchargePaid) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
         return false;
     }
 }
