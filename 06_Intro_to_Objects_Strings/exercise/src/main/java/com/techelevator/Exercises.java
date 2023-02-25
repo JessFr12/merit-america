@@ -111,7 +111,14 @@ public class Exercises {
 	 comboString("aaa", "b") → "baaab"
 	 */
 	public String comboString(String a, String b) {
-		return null;
+
+		int lenA = a.length();
+		int lenB = b.length();
+		if (lenA < lenB)
+			return a+b+a;
+		else
+			return b+a+b;
+
 	}
 
 	/*
@@ -122,7 +129,8 @@ public class Exercises {
 	 nonStart("shotl", "java") → "hotlava"
 	 */
 	public String nonStart(String a, String b) {
-		return null;
+
+		return a.substring(1)+b.substring(1);
 	}
 
 	/*
