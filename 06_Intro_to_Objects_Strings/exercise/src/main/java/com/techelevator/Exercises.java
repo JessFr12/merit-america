@@ -222,7 +222,10 @@ public class Exercises {
 	 nTwice("Chocolate", 1) → "Ce"
 	 */
 	public String nTwice(String str, int n) {
-		return null;
+		if(n == 0)
+			return "";
+		else
+		return str.substring(0,n)+str.substring(str.length()-n);
 	}
 
 	/*
@@ -234,7 +237,10 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int n) {
-		return null;
+		if (str.length() <= n + 1 || n < 0)
+			return str.substring(0, 2);
+		else
+			return str.substring(n, n + 2);
 	}
 
 	/*
