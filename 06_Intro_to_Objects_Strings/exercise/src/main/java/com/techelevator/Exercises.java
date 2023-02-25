@@ -197,7 +197,8 @@ public class Exercises {
 	 middleTwo("Practice") → "ct"
 	 */
 	public String middleTwo(String str) {
-		return null;
+		return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
+
 	}
 
 	/*
@@ -207,7 +208,10 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
-		return false;
+		if (str.endsWith("ly"))
+		return true;
+		else
+			return false;
 	}
 
 	/*
