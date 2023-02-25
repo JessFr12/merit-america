@@ -141,7 +141,9 @@ public class Exercises {
 	 left2("Hi") → "Hi"
 	 */
 	public String left2(String str) {
-		return null;
+		return str.substring(2, str.length()) + str.substring(0,2);
+
+
 	}
 
 	/*
@@ -152,7 +154,9 @@ public class Exercises {
 	 right2("Hi") → "Hi"
 	 */
 	public String right2(String str) {
-		return null;
+
+		return str.substring(str.length()-2, str.length()) + str.substring(0,str.length()-2);
+
 	}
 
 	/*
