@@ -167,7 +167,12 @@ public class Exercises {
 	 theEnd("oh", true) → "o"
 	 */
 	public String theEnd(String str, boolean front) {
-		return null;
+		if (front == true)
+			return str.substring(0,1);
+		else
+			return str.substring(str.length()-1,str.length());
+
+
 	}
 
 	/*
@@ -178,7 +183,10 @@ public class Exercises {
 	 withoutEnd2("ab") → ""
 	 */
 	public String withoutEnd2(String str) {
-		return null;
+		if (str.length() <= 2)
+			return "";
+		return str.substring(1, str.length() - 1);
+
 	}
 
 	/*
