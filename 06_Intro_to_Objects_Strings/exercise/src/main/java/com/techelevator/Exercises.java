@@ -283,7 +283,14 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		return null;
+		if (n > 0)
+			return str.repeat(n);
+		else if (n <= 0) {
+			return "";
+
+		} else
+			return null;
+
 	}
 
 	/*
@@ -294,7 +301,12 @@ public class Exercises {
 	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
 	public String frontTimes(String str, int n) {
-		return null;
+		if (str.length() < 3)
+			return str.repeat(n);
+		if (str.length() >= 3)
+			return str.substring(0,3).repeat(n);
+		else
+			return null;
 	}
 
 	/*
