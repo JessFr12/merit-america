@@ -251,7 +251,9 @@ public class Exercises {
 	 middleThree("solving") → "lvi"
 	 */
 	public String middleThree(String str) {
-		return null;
+		int middleThree = str.length() / 2;
+
+		return str.substring(middleThree-1, middleThree+2);
 	}
 
 	/*
@@ -263,6 +265,14 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
+		if(str.length() < 3)
+			return false;
+		else if ((str.substring(0, 3)).equals("bad"))
+			return true;
+		else if (str.length() > 3){
+			if ((str.substring(1, 4)).equals("bad"))
+				return true;
+		}
 		return false;
 	}
 
