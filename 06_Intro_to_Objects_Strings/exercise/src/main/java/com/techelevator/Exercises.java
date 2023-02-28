@@ -350,7 +350,11 @@ public class Exercises {
 	 stringBits("Heeololeo") → "Hello"
 	 */
 	public String stringBits(String str) {
-		return null;
+		int len = str.length();
+		StringBuilder stbuild = new StringBuilder(len+1);
+		for(int i = 0; i < len; i += 2)
+			stbuild.append(str.charAt(i));
+		return stbuild.toString();
 	}
 
 	/*
@@ -360,7 +364,18 @@ public class Exercises {
 	 stringSplosion("ab") → "aab"
 	 */
 	public String stringSplosion(String str) {
-		return null;
+		StringBuilder stbuild;
+		int len = str.length();
+		int bufferSize = 1;
+		for(int i = 2; i <= len; i++)
+			bufferSize *= i;
+		stbuild = new StringBuilder(bufferSize);
+		for(int i = 1; i <= len; i++)
+		{
+			for(int j = 0; j < i; j++)
+				stbuild.append(str.charAt(j));
+		}
+		return stbuild.toString();
 	}
 
 	/*
