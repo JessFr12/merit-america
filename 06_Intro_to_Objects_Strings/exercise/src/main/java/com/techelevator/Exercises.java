@@ -386,7 +386,17 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	public int last2(String str) {
-		return 0;
+		int len = str.length() - 2;
+		int count = 0;
+		if(len >= 0) {
+			String end = str.substring(len);
+			for(int i = 0; i < len; i++)
+			{
+				if(str.substring(i, i+2).equals(end))
+					count++;
+			}
+		}
+		return count;
 	}
 
 	/*
@@ -397,7 +407,20 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		return null;
+		int len = str.length();
+		if(len >= 2) {
+			len--;
+			StringBuilder stbuild = new StringBuilder(len-1);
+			stbuild.append(str.charAt(0));
+			for(int i = 1; i < len; i++) {
+				if(str.charAt(i) != 'x')
+					stbuild.append(str.charAt(i));
+			}
+			stbuild.append(str.charAt(len));
+			return stbuild.toString();
+		}
+		else
+			return str;
 	}
 
 	/*
