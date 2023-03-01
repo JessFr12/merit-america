@@ -430,7 +430,18 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		int len = str.length();
+		if(len >= 3) {
+			StringBuilder stbuild = new StringBuilder();
+			for(int i = 0; i < len; i += 4) {
+				stbuild.append(str.charAt(i));
+				if(i+1 < len)
+					stbuild.append(str.charAt(i+1));
+			}
+			return stbuild.toString();
+		}
+		else
+			return str;
 	}
 
 	/*
@@ -441,7 +452,20 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		int len = str.length();
+		int i = 0;
+		char ch;
+		StringBuilder stbuild = new StringBuilder(len);
+		while(i < len) {
+			ch = str.charAt(i);
+			if(i+2 < len && ch == 'y' && str.charAt(i+2) == 'k')
+				i += 3;
+			else {
+				stbuild.append(ch);
+				i++;
+			}
+		}
+		return stbuild.toString();
 	}
 
 }
