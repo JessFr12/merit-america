@@ -1,9 +1,6 @@
 package com.techelevator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Exercises {
 
@@ -80,7 +77,12 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> oddValues = new ArrayList<Integer>();
+		for (int i = 0;i < integerArray.length;i++)
+			if (integerArray[i] % 2 != 0)
+				oddValues.add(integerArray[i]);
+
+		return oddValues;
 	}
 
 	/*
@@ -91,7 +93,11 @@ public class Exercises {
 	 foundIntTwice( [9, 9, 44, 2, 88, 9], 9) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		Set<Integer> duplicates = new HashSet<Integer>(integerList);
+		if(duplicates.size() < integerList.size())
+			return true;
+		else
+			return false;
 	}
 
 	/*
