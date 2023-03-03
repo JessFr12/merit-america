@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Exercises {
@@ -40,7 +41,8 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		List<String> strings = new ArrayList<>(Arrays.asList(stringArray));
+		return strings;
 	}
 
 	/*
@@ -50,7 +52,14 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		List<Double> listDoubles = new ArrayList<Double>();
+		double dividedElements;
+		double quotient = 2.0;
+		for (int i = 0; i < intArray.length ; i++) {
+			dividedElements = (double)intArray[i] / quotient;
+			listDoubles.add(dividedElements);
+		}
+		return listDoubles;
 	}
 
 	/*
@@ -60,7 +69,8 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 81238
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+	int maxValue = Collections.max(integerList);
+	return maxValue;
 	}
 
 	/*
