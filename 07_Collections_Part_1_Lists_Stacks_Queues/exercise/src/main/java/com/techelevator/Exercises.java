@@ -116,24 +116,17 @@ public class Exercises {
 	HINT: To convert an Integer x to a String, you can use x.toString() in your code. For example, if x = 1, then x.toString() returns "1."
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		List<String> correctList = new ArrayList<>();
-		for (int num : integerArray) {
-			if (num % 3 == 0 && num % 5 == 0) {
-				String temp = Integer.toString(num);
-				temp.replaceAll(temp, "FizzBuzz");
-				correctList.add(temp);
-			} else if (num % 3 == 0) {
-				String temp = Integer.toString(num);
-				temp.replaceAll(temp, "Fizz");
-				correctList.add(temp);
-			} else if (num % 5 == 0) {
-				String temp = Integer.toString(num);
-				temp.replaceAll(temp, "Buzz");
-				correctList.add(temp);
-
-			}
-		}
-		return correctList;
+		List<String> fizzBList = new ArrayList<>();
+		for (Integer filter : integerArray)
+			if (filter % 3 == 0 && filter % 5 == 0)
+				fizzBList.add("FizzBuzz");
+		else if (filter % 3 == 0)
+			fizzBList.add("Fizz");
+		else if (filter % 5 == 0)
+			fizzBList.add("Buzz");
+		else
+			fizzBList.add(filter.toString());
+		return fizzBList;
 	}
 
 	/*
@@ -144,7 +137,17 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		List<Integer> interleavedList = new ArrayList<>();
+		int listSize = Math.max(listOne.size(),listTwo.size());
+		for (int i = 0; i < listSize;i++) {
+			if (i < listOne.size()) {
+				interleavedList.add(listOne.get(i));
+			}
+			if (i < listTwo.size()) {
+				interleavedList.add(listTwo.get(i));
+			}
+		}
+		return interleavedList;
 	}
 
 }
