@@ -38,8 +38,11 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		List<String> strings = new ArrayList<>(Arrays.asList(stringArray));
-		return strings;
+		List<String> noFourLetterWords = new ArrayList<String>();
+		for (String filter : stringArray)
+			if (filter.length() != 4)
+				noFourLetterWords.add(filter);
+		return noFourLetterWords;
 	}
 
 	/*
@@ -113,7 +116,24 @@ public class Exercises {
 	HINT: To convert an Integer x to a String, you can use x.toString() in your code. For example, if x = 1, then x.toString() returns "1."
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		List<String> correctList = new ArrayList<>();
+		for (int num : integerArray) {
+			if (num % 3 == 0 && num % 5 == 0) {
+				String temp = Integer.toString(num);
+				temp.replaceAll(temp, "FizzBuzz");
+				correctList.add(temp);
+			} else if (num % 3 == 0) {
+				String temp = Integer.toString(num);
+				temp.replaceAll(temp, "Fizz");
+				correctList.add(temp);
+			} else if (num % 5 == 0) {
+				String temp = Integer.toString(num);
+				temp.replaceAll(temp, "Buzz");
+				correctList.add(temp);
+
+			}
+		}
+		return correctList;
 	}
 
 	/*
