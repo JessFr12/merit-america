@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -104,7 +105,17 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		int peterMoney = peterPaul.getOrDefault("Peter", 0);
+		int paulMoney = peterPaul.getOrDefault("Paul", 0);
+
+		if (peterMoney > 0 && paulMoney < 1000) {
+			int transfer = peterMoney / 2;
+			transfer = Math.min(transfer, 1000 - paulMoney);
+
+			peterPaul.put("Peter", peterMoney / 2);
+			peterPaul.put("Paul", paulMoney + transfer);
+		}
+		return peterPaul;
 	}
 
 	/*
@@ -117,7 +128,19 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		int peterMoney = peterPaul.getOrDefault("Peter",0);
+		int paulMoney = peterPaul.getOrDefault("Paul",0);
+
+		Map<String,Integer> peterPaulPartnership = new HashMap<>(peterPaul);
+
+		if (peterMoney >= 50000 && paulMoney >= 100000) {
+			int collabAmount = (peterMoney + paulMoney) / 4;
+
+			peterPaulPartnership.put("Peter", peterMoney - collabAmount);
+			peterPaulPartnership.put("Paul",paulMoney - collabAmount);
+			peterPaulPartnership.put("PeterPaulPartnership", collabAmount);
+		}
+		return peterPaulPartnership;
 	}
 
 	/*
@@ -129,7 +152,13 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String,String> firstLastChar = new HashMap<>();
+		for (String word : words) {
+			String firstChar = word.substring(0,1);
+			String lastChar = word.substring(word.length()-1);
+			firstLastChar.put(firstChar,lastChar);
+		}
+		return firstLastChar;
 	}
 
 	/*
@@ -145,7 +174,17 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String,Integer> wordCount = new HashMap<>();
+
+		for (String word : words) {
+			if (wordCount.containsKey(word)) {
+				int count = wordCount.get(word);
+				wordCount.put(word, count + 1);
+			} else {
+				wordCount.put(word,1);
+		}
+		}
+		return wordCount;
 	}
 
 	/*
