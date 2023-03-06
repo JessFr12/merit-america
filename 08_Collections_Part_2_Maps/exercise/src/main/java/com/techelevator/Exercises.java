@@ -105,15 +105,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		int peterMoney = peterPaul.getOrDefault("Peter", 0);
-		int paulMoney = peterPaul.getOrDefault("Paul", 0);
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
 
 		if (peterMoney > 0 && paulMoney < 1000) {
 			int transfer = peterMoney / 2;
-			transfer = Math.min(transfer, 1000 - paulMoney);
 
-			peterPaul.put("Peter", peterMoney / 2);
-			peterPaul.put("Paul", paulMoney + transfer);
+
+				peterPaul.put("Peter", peterMoney - transfer);
+				peterPaul.put("Paul", paulMoney + transfer);
+
 		}
 		return peterPaul;
 	}
@@ -128,19 +129,21 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		int peterMoney = peterPaul.getOrDefault("Peter", 0);
-		int paulMoney = peterPaul.getOrDefault("Paul", 0);
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
 
-		Map<String, Integer> peterPaulPartnership = new HashMap<>(peterPaul);
 
-		if (peterMoney >= 50000 && paulMoney >= 100000) {
-			int collabAmount = (peterMoney + paulMoney) / 4;
+		if (peterMoney >= 5000 && paulMoney >= 10000) {
+			int peterShare = peterMoney / 4;
+			int paulShare = paulMoney / 4;
+			int partnershipTotal = peterShare + paulShare;
 
-			peterPaulPartnership.put("Peter", peterMoney - collabAmount);
-			peterPaulPartnership.put("Paul", paulMoney - collabAmount);
-			peterPaulPartnership.put("PeterPaulPartnership", collabAmount);
+
+			peterPaul.put("Peter", peterMoney - peterShare);
+			peterPaul.put("Paul", paulMoney - paulShare);
+			peterPaul.put("PeterPaulPartnership", partnershipTotal);
 		}
-		return peterPaulPartnership;
+		return peterPaul;
 	}
 
 	/*
