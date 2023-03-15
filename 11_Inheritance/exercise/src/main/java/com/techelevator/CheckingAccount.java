@@ -1,7 +1,7 @@
 package com.techelevator;
 public class CheckingAccount extends BankAccount {
 
-    //private static final int OVERDRAFT_FEE = 10;
+    private static final int OVERDRAFT_FEE = 10;
     //private static final int OVERDRAFT_LIMIT = -100;
 
     public CheckingAccount(String accountHolderName, String accountNumber) {
@@ -13,8 +13,14 @@ public class CheckingAccount extends BankAccount {
     }
 
     public int withdraw(int amountToWithdraw) {
-        return 0;
 
+        if (getBalance() - amountToWithdraw > -100) {
+            super.withdraw(amountToWithdraw);
+            if (getBalance() < 0) {
+                super.withdraw(10);
+            }
+        }
+        return getBalance();
     }
 
 
