@@ -26,9 +26,6 @@ public class BankAccount implements Accountable {
         return accountNumber;
     }
 
-    public int getBalance() {
-        return balance;
-    }
 
     public int deposit(int amountToDeposit) {
         balance = balance + amountToDeposit;
@@ -41,9 +38,16 @@ public class BankAccount implements Accountable {
     }
 
     public int transferTo(BankAccount destinationAccount, int transferAmount) {
-        this.balance -= transferAmount;
-        destinationAccount.deposit(transferAmount);
-        return balance;
+        destinationAccount.balance = destinationAccount.balance + transferAmount;
+        if(this instanceof SavingsAccount && this.balance < 150) { // check if this instance is Savings Account
+            return this.balance = this.balance - (transferAmount + 2);
+        }else if(this instanceof CheckingAccount && this.balance < 0) // Check if this instance is Current Account
+            return this.balance = this.balance - (transferAmount + 10);
+        else return this.balance = this.balance - transferAmount;
+    }
+
+    public int getBalance() {
+        return this.balance;
     }
 
 }
